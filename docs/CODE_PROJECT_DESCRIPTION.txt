@@ -1,0 +1,10 @@
+This project implements GPU-accelerated batch image processing using NVIDIA CUDA. "
+"The objective is to process a large amount of image data using GPU computation. "
+"The project generates 120 grayscale 256 x 256 images and processes every image with a custom CUDA kernel. "
+"Each GPU thread processes one pixel independently. The kernel applies contrast enhancement and brightness adjustment, then clamps the pixel value to the valid grayscale range. "
+"The application manages host and device memory, transfers image data to the GPU, launches the CUDA kernel, retrieves the results, and writes processed images to disk. "
+"Command-line arguments control the input directory, output directory, CUDA thread count, contrast, and brightness. "
+"A Makefile and shell scripts provide reproducible build and execution procedures. "
+"CUDA events measure GPU kernel execution time. An output-validation script verifies that every input image has a corresponding output image. "
+"The project demonstrates how an image-processing workload with many independent operations can be mapped naturally to GPU parallelism. "
+"It also highlights the difference between GPU kernel time and total application time because memory transfers and file I/O contribute to total execution time.
